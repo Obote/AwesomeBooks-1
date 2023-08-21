@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./modules/index.js" defer type="module"></script>
+    <script src="./modules/list.js" defer type="module"></script>
+    <script src="./modules/contact.js" defer type="module"></script>
+    <script src="./modules/add.js" defer type="module"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>The move function</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo"><h1>Awesome Books</h1></div>
+        <ul class="menu-list">
+          <li class="list"><a href="#">List</a></li>
+          <li class="add"><a href="#">Add</a></li>
+          <li class="l-contact"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="book-list">
+      <h1 class="heading">Book list</h1>
+      <p class="length"></p>
+      <div class="container"></div>
+    </section>
+    <section class="section2">
+      <div class="container1">
+        <div class="form">
+          <label for="author" class="label">Author</label>
+          <input type="text" class="author" id="author" name="author" />
+        </div>
+        <div class="form">
+          <label for="book-title">Title</label>
+          <input type="text" name="title" id="book-title" class="title" />
+        </div>
+
+        <button class="add-button">Add</button>
+
+        <span class="error-message"></span>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="contact-container">
+        <h1>Contact</h1>
+        <p>
+          You cn get to use just to say hello Or if you want to fine out a bit
+          more about the company. Here is out email below
+        </p>
+        <ul>
+          <li>Tel:</li>
+          <li>Email:</li>
+          <li>Web:</li>
+        </ul>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-container">
+        <p>Copy write</p>
+      </div>
+    </footer>
+  </body>
+</html>

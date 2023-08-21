@@ -1,15 +1,13 @@
 import { DateTime } from '../node_modules/luxon/build/es6/luxon.js';
 
 const date = document.querySelector('.date');
-console.log(date);
-const year = DateTime.now().c.year;
-const month = DateTime.now().c.month;
-const day = DateTime.now().c.day;
-const hour = DateTime.now().c.hour;
-const minutes = DateTime.now().c.minute;
-console.log(minutes);
-const seconds = DateTime.now().c.second;
+const year = DateTime.now();
+const month = DateTime.now();
+const day = DateTime.now();
+const hour = DateTime.now();
+const minutes = DateTime.now();
+const seconds = DateTime.now();
 
 setTimeout(() => {
-  date.innerHTML = `${day}/${month}/${year} | ${hour}:${minutes}:${seconds}`;
-}, 100);
+  date.innerHTML = `${day.c.day}/${month.c.month}/${year.c.year} | ${hour.c.hour}:${minutes.c.minute}:${seconds.c.second}`;
+}, 1000);

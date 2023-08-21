@@ -5,7 +5,6 @@ import setInitialTime from './modules/dateTime.js';
 import { Awesomebooks } from './modules/awesomebooks.js';
 
 const awesomebook = new Awesomebooks();
-awesomebook.displayItems();
 
 const addbutton = document.querySelector('.add-button');
 

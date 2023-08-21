@@ -1,6 +1,12 @@
-import { lcontact, contact21, section31, list11 } from './modules/contact.js';
-import { add, contact2, section21, list1 } from './modules/add.js';
-import { list, lList, contact, section2 } from './modules/list.js';
+import {
+  lcontact, contact21, section31, list11,
+} from './modules/contact.js';
+import {
+  add, contact2, section21, list1,
+} from './modules/add.js';
+import {
+  list, lList, contact, section2,
+} from './modules/list.js';
 import setInitialTime from './modules/dateTime.js';
 import Awesomebooks from './modules/awesomebooks.js';
 

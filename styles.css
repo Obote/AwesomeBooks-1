@@ -137,6 +137,12 @@
 
 .contact-container h1 {
   text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.contact-container ul li {
+  list-style-type: disc;
+  margin: 10px 0 0 30px;
 }
 
 .hidden {
@@ -159,4 +165,17 @@
   align-items: center;
   padding: 5px;
   border-radius: 5px;
+}
+
+.time {
+  margin: 80px 0 0 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0 10px 0 0;
+}
+
+.date {
+  font-size: 16px;
+  font-weight: bold;
 }

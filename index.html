@@ -3,10 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./modules/dateTime.js" defer type="module"></script>
     <script src="./modules/index.js" defer type="module"></script>
     <script src="./modules/list.js" defer type="module"></script>
     <script src="./modules/contact.js" defer type="module"></script>
     <script src="./modules/add.js" defer type="module"></script>
+    <script
+      src="./node_modules/luxon/build/es6/luxon.js"
+      type="module"
+    ></script>
+
     <link rel="stylesheet" href="styles.css" />
     <title>The move function</title>
   </head>
@@ -21,6 +27,9 @@
         </ul>
       </nav>
     </header>
+    <section class="time">
+      <span class="date"></span>
+    </section>
     <section class="book-list">
       <h1 class="heading">Book list</h1>
 
@@ -46,13 +55,13 @@
       <div class="contact-container">
         <h1>Contact</h1>
         <p>
-          You cn get to use just to say hello Or if you want to fine out a bit
-          more about the company. Here is out email below
+          You can get in contact just to say hello Or if you want to fine out a
+          bit more about the company. Here is our contact details below.
         </p>
         <ul>
-          <li>Tel:</li>
-          <li>Email:</li>
-          <li>Web:</li>
+          <li>Our email: customerservice@frecolimited.com</li>
+          <li>Our Phone Number: 0447519999500:</li>
+          <li>Our Address: 123 Hilton Road, Birmingham</li>
         </ul>
       </div>
     </section>

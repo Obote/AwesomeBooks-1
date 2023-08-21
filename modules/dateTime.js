@@ -8,6 +8,4 @@ const hour = DateTime.now();
 const minutes = DateTime.now();
 const seconds = DateTime.now();
 
-setTimeout(() => {
-  date.innerHTML = `${day.c.day}/${month.c.month}/${year.c.year} | ${hour.c.hour}:${minutes.c.minute}:${seconds.c.second}`;
-}, 1000);
+date.innerHTML = `${day.c.day}/${month.c.month}/${year.c.year} | ${hour.c.hour}:${minutes.c.minute}:${seconds.c.second}`;

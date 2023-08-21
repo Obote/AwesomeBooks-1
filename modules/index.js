@@ -1,26 +1,16 @@
-import { lcontact, contact21, section31, list11 } from './contact.js';
-import { add, contact2, section21, list1 } from './add.js';
-import { list, lList, contact, section2 } from './list.js';
+import {
+  lcontact, contact21, section31, list11,
+} from './contact.js';
+import {
+  add, contact2, section21, list1,
+} from './add.js';
+import {
+  list, lList, contact, section2,
+} from './list.js';
 
 class Awesomebooks {
   constructor() {
     this.data = JSON.parse(localStorage.getItem('data')) || [];
-  }
-
-  arrayLength() {
-    const para = document.querySelector('.length');
-    const { length } = this.data;
-    if (length > 0 && length <= 5) {
-      para.classList.add('red');
-    } else if (length > 5 && length < 10) {
-      para.classList.add('yellow');
-      para.classList.remove('red');
-    } else if (length >= 10) {
-      para.classList.add('green');
-      para.classList.remove('yellow');
-      para.classList.remove('red');
-    }
-    return length;
   }
 
   add() {
@@ -37,15 +27,15 @@ class Awesomebooks {
     } else {
       const obj = { author: author.value, title: title.value };
       this.data.push(obj);
-      this.updateLocalStorage(this.data);
+      this.updateLocalStorage();
       author.value = '';
       title.value = '';
       this.displayItems();
     }
   }
 
-  updateLocalStorage(data) {
-    localStorage.setItem('data', JSON.stringify(data));
+  updateLocalStorage() {
+    localStorage.setItem('data', JSON.stringify(this.data));
   }
 
   displayItems() {
@@ -55,9 +45,9 @@ class Awesomebooks {
       .map(
         (
           list,
-          index
+          index,
         ) => `<ul class="ul"><li class="node" data-index="${index}">${list.author} by ${list.title}
-        <div><button class="delete">Delete</button></div></li></ul><hr />`
+        <div><button class="delete">Delete</button></div></li></ul><hr />`,
       )
       .join(' ');
 
@@ -68,11 +58,8 @@ class Awesomebooks {
       button.addEventListener('click', (e) => {
         const index = e.target.getAttribute('data-index');
         this.data.splice(index, 1);
-        this.updateLocalStorage(this.data);
+        this.updateLocalStorage();
         this.displayItems();
-        setTimeout(() => {
-          location.reload();
-        });
       });
     });
   }
@@ -83,14 +70,7 @@ awesomebook.displayItems();
 const addbutton = document.querySelector('.add-button');
 addbutton.addEventListener('click', () => {
   awesomebook.add();
-  setTimeout(() => {
-    location.reload();
-  }, 100);
 });
-
-const result = awesomebook.arrayLength();
-const length = document.querySelector('.length');
-length.innerHTML = `There are <span class="number">${result}</span> book(s) in the list`;
 
 lcontact.addEventListener('click', () => {
   list11.classList.add('hidden');

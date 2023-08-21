@@ -16,14 +16,13 @@ class Awesomebooks {
       const errormessage = new Error('please privide title and author');
       error.innerHTML = errormessage;
       return;
-    } else {
-      const obj = { author: author.value, title: title.value };
-      this.data.push(obj);
-      this.updateLocalStorage(this.data);
-      author.value = '';
-      title.value = '';
-      this.displayItems();
     }
+    const obj = { author: author.value, title: title.value };
+    this.data.push(obj);
+    this.updateLocalStorage(this.data);
+    author.value = '';
+    title.value = '';
+    this.displayItems();
   };
 
   updateLocalStorage = () => {

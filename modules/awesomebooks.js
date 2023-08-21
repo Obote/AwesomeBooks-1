@@ -1,4 +1,4 @@
-export class Awesomebooks {
+export default class Awesomebooks {
   constructor() {
     this.data = JSON.parse(localStorage.getItem('data')) || [];
   }
@@ -32,7 +32,7 @@ export class Awesomebooks {
       .map(
         (list, index) => `<ul class="ul"><li class="node" 
     data-index="${index}">${list.author} by ${list.title}
-        <div><button class="delete" type="submit">Delete</button></div></li></ul><hr />`
+        <div><button class="delete" type="submit">Delete</button></div></li></ul><hr />`,
       )
       .join(' ');
 

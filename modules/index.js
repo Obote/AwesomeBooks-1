@@ -1,12 +1,6 @@
-import {
-  lcontact, contact21, section31, list11,
-} from './contact.js';
-import {
-  add, contact2, section21, list1,
-} from './add.js';
-import {
-  list, lList, contact, section2,
-} from './list.js';
+import { lcontact, contact21, section31, list11 } from './contact.js';
+import { add, contact2, section21, list1 } from './add.js';
+import { list, lList, contact, section2 } from './list.js';
 
 class Awesomebooks {
   constructor() {
@@ -61,9 +55,9 @@ class Awesomebooks {
       .map(
         (
           list,
-          index,
+          index
         ) => `<ul class="ul"><li class="node" data-index="${index}">${list.author} by ${list.title}
-        <div><button class="delete">Delete</button></div></li></ul><hr />`,
+        <div><button class="delete">Delete</button></div></li></ul><hr />`
       )
       .join(' ');
 
